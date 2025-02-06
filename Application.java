@@ -1,6 +1,8 @@
 public class Application{
     public int list[] = new int[100];
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        
         
         
         
