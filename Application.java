@@ -5,11 +5,19 @@ public class Application{
         
         
     }
-    p
+    
 
     public static int FindMax(int list[]){
 
-        int max = 0;
+        int max = list[0];
+        for( int i=0; i<list.length; i++)
+        {
+            if( list[i]>max)
+            {
+                max = list[i];
+            }
+
+        }
 
         return max; 
     }
@@ -17,6 +25,14 @@ public class Application{
     public static int FindMin(int list[]){
 
         int min = 0;
+        for( int i=0; i<list.length; i++)
+        {
+            if( list[i]<min)
+            {
+                min = list[i];
+            }
+
+        }
 
         return min; 
     }
@@ -24,6 +40,10 @@ public class Application{
     public static int AverageOfArray(int list[]){
 
         int average = 0;
+        for(int i =0;i<list.length;i++)
+        {
+            average += list[i];
+        }
 
         return average; 
     }
