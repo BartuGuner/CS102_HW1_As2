@@ -8,16 +8,22 @@ public class Application{
     p
 
     public static int FindMax(int list[]){
-
-        int max = 0;
-
+        int max = list[0];
+        for (int i = 1; i < list.length; i++) {
+            if(list[i] > max){
+                max = list[i];
+            }
+        }
         return max; 
     }
 
     public static int FindMin(int list[]){
-
-        int min = 0;
-
+        int min = list[0];
+        for (int i = 1; i < list.length; i++) {
+            if(list[i] < min){
+                min = list[i];
+            }
+        }
         return min; 
     }
 
