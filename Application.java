@@ -1,5 +1,5 @@
 public class Application{
-    public int list[] = new int[100];//hjgjhgjhg
+    public int list[] = new int[100];//hjgjhgjhgjhgdaahs
     public static void main(String[] args) 
     {
         
