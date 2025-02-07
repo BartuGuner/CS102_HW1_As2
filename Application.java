@@ -7,6 +7,7 @@ public class Application {
     public static void main(String[] args) {
         int[] list = new int[100];// hjgjhgjhgjhgdaahsdsfsdf
         Random r = new Random();
+        boolean loopController = true;
         Scanner in = new Scanner(System.in);
         for (var i = 0; i < list.length; i++) {
             list[i] = r.nextInt(100);
@@ -21,42 +22,47 @@ public class Application {
             System.out.println("7 - exit");
             var choice = in.nextInt();
 
-            if (choice == 1)
+            if (choice == 1) {
                 System.out.println(FindMax(list));
-            else if (choice == 2)
+            } else if (choice == 2) {
                 System.out.println(FindMin(list));
-            else if (choice == 3)
+            } else if (choice == 3) {
                 System.out.println(AverageOfArray(list));
-            else if (choice == 4)
+            } else if (choice == 4) {
                 System.out.println(Arrays.toString(DifferOfArray(list)));
-            else if (choice == 5)
+            } else if (choice == 5) {
                 System.out.println(SumOfOddIndexs(list));
-            else if (choice == 6)
+            } else if (choice == 6) {
                 System.out.println(SumOfEvenIndexs(list));
-            else if (choice == 7)
-                break;
+            } else if (choice == 7) {
+                System.out.println("Exiting the program...");
+                loopController = false;
+            } else {
+                System.out.println("Invalid choice");
+            }
 
-        } while (true);
+        } while (loopController);
     }
 
     public static int FindMax(int list[]) {
-        int max = list[0];
+
+        int maxValue = list[0];
         for (int i = 1; i < list.length; i++) {
-            if (list[i] > max) {
-                max = list[i];
+            if (list[i] > maxValue) {
+                maxValue = list[i];
             }
         }
-        return max;
+        return maxValue;
     }
 
     public static int FindMin(int list[]) {
-        int min = list[0];
+        int minValue = list[0];
         for (int i = 1; i < list.length; i++) {
-            if (list[i] < min) {
-                min = list[i];
+            if (list[i] < minValue) {
+                minValue = list[i];
             }
         }
-        return min;
+        return minValue;
     }
 
     public static int AverageOfArray(int list[]) {
